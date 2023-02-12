@@ -1,0 +1,2 @@
+2023-02-12T15:54:14.041+0800	INFO	middlewares/logger.go:31	/v1/user/list2	{"statusxixixixi": 404, "method": "GET", "path": "/v1/user/list2", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.29.0", "errors": "", "cost": "458ns"}
+2023-02-12T15:55:12.192+0800	INFO	middlewares/logger.go:31	/v12121	{"statusxixixixi": 404, "method": "GET", "path": "/v12121", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.29.0", "errors": "", "cost": "7µs"}
