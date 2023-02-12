@@ -1,10 +1,10 @@
 package controller
 
 import (
+	"ginTest/Response"
 	"ginTest/forms"
 	"ginTest/utils"
 	"github.com/gin-gonic/gin"
-	"net/http"
 )
 
 //// PasswordLogin 登录
@@ -29,7 +29,5 @@ func PasswordLogin(c *gin.Context) {
 		utils.HandleValidatorError(c, err)
 		return
 	}
-	c.JSON(http.StatusOK, gin.H{
-		"msg": "sussess",
-	})
+	Response.Success(c, 200, "success", "test")
 }

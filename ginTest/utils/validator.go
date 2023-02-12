@@ -1,6 +1,7 @@
 package utils
 
 import (
+	"ginTest/Response"
 	"ginTest/global"
 	"github.com/gin-gonic/gin"
 	"github.com/go-playground/validator/v10"
@@ -18,9 +19,8 @@ func HandleValidatorError(c *gin.Context, err error) {
 			"msg": err.Error(),
 		})
 	}
-	c.JSON(http.StatusBadRequest, gin.H{
-		"error": removeTopStruct(errs.Translate(global.Trans)),
-	})
+	msg := removeTopStruct(errs.Translate(global.Trans))
+	Response.Err(c, http.StatusBadRequest, 400, "字段校验错误", msg)
 	return
 }
 
